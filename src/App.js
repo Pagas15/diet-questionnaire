@@ -190,7 +190,6 @@ function App() {
               }}
               questTion={
                 <div>
-                  {answers.question4}
                   <CountSize
                     placeholder={'Вес'}
                     style={{ borderColor: boolean ? '#3D44FF' : '#F979F4', marginBottom: '40px' }}
