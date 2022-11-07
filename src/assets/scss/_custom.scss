@@ -41,23 +41,11 @@
     .cardPerson__checkMark {
       background: #3d44ff;
     }
-    .cardPerson__text {
-      color: #3d44ff;
-      svg {
-        fill: #3d44ff;
-      }
-    }
   }
   &.cardPerson--female {
     background: #f979f4;
     .cardPerson__checkMark {
       background: #ab1ca4;
-    }
-    .cardPerson__text {
-      color: #ab1ca4;
-      svg {
-        fill: #ab1ca4;
-      }
     }
   }
   &__img {
@@ -110,7 +98,7 @@
     font-size: 40px;
     line-height: 49px;
 
-    color: #747474;
+    color: #ffffff;
     position: relative;
     text-align: center;
     svg {
@@ -118,6 +106,7 @@
       right: -3px;
       transform: translateX(100%) translateY(-50%);
       top: 50%;
+      fill: #ffffff;
     }
     @media screen and (max-width: 768px), screen and (max-height: 590px) {
       font-size: 30px;
@@ -154,7 +143,8 @@
         color: #ffffff;
       }
       .header__time {
-        color: #3d44ff;
+        // color: #3d44ff;
+        color: #ffffff;
       }
       .header__shadow {
         background: #3da2ff;
@@ -166,7 +156,8 @@
         color: #ffffff;
       }
       .header__time {
-        color: #ab1ca4;
+        // color: #ab1ca4;
+        color: #ffffff;
       }
       .header__shadow {
         background: #f979f4;
@@ -369,7 +360,7 @@
       }
       .suckBar__nums {
         span {
-          color: #3da2ff;
+          color: #3d44ff;
         }
       }
       .line {
@@ -384,7 +375,7 @@
       }
       .suckBar__nums {
         span {
-          color: #f979f4;
+          color: #ab1ca4;
         }
       }
       .line {
@@ -466,15 +457,27 @@
       background: #3d44ff;
     }
     .select__text {
-      color: #3d44ff;
+      // color: #3d44ff;
+      color: #ffffff;
     }
     .select__btn {
       background: #3da2ff;
       border-color: #3da2ff;
-      &.active,
-      &:hover {
+      &.active {
         background: #ffffff;
         border-color: #3d44ff;
+        .select__text {
+          color: #3d44ff;
+        }
+      }
+      @include from($break_sm) {
+        &:hover {
+          background: #ffffff;
+          border-color: #3d44ff;
+          .select__text {
+            color: #3d44ff;
+          }
+        }
       }
     }
   }
@@ -483,15 +486,27 @@
       background: #ab1ca4;
     }
     .select__text {
-      color: #ab1ca4;
+      // color: #ab1ca4;
+      color: #ffffff;
     }
     .select__btn {
       background: #f979f4;
       border-color: #f979f4;
-      &.active,
-      &:hover {
+      &.active {
         background: #ffffff;
         border-color: #ab1ca4;
+        .select__text {
+          color: #ab1ca4;
+        }
+      }
+      @include from($break_sm) {
+        &:hover {
+          background: #ffffff;
+          border-color: #ab1ca4;
+          .select__text {
+            color: #ab1ca4;
+          }
+        }
       }
     }
   }
@@ -515,12 +530,20 @@
     transition: all 0.12s ease-in-out;
 
     border: 2px solid #ab1ca4;
-    &.active,
-    &:hover {
+    &.active {
       background: #ffffff !important;
       border: 2px solid transparent;
       .select__checkMark {
         opacity: 1;
+      }
+    }
+    @include from($break_sm) {
+      &:hover {
+        background: #ffffff !important;
+        border: 2px solid transparent;
+        .select__checkMark {
+          opacity: 1;
+        }
       }
     }
     &:active {
@@ -542,6 +565,7 @@
     font-size: 24px;
     line-height: 29px;
     text-align: start;
+    // color: #ffffff;
   }
   &__checkMark {
     width: 27px;
@@ -583,8 +607,14 @@
     font-size: 30px;
     line-height: 37px;
     color: #000000;
+    -moz-appearance: textfield;
     &::placeholder {
       color: #a5a5a5;
+    }
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   }
   position: relative;
@@ -651,6 +681,7 @@
     .titleArrow .title {
       margin-top: -34px !important;
       margin-bottom: 10px;
+      max-width: 490px;
     }
   }
 }
