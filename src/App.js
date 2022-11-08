@@ -38,6 +38,7 @@ function App() {
   };
   const changeQuestion16 = (result) => {
     changeRusultItem('question16', result);
+    window.location.assign('https://yourdailyplan.online/fitoplan-subscribe');
   };
   return (
     <div className="app">
